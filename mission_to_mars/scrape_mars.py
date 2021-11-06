@@ -31,9 +31,8 @@ def scrape():
     url3 = 'https://galaxyfacts-mars.com'
     tables = pd.read_html(url3)
     info_df = tables[0]
-    info_df.columns = ['Fact', 'Mars', 'Earth']
-    info_df.drop(index=0)
-    info_html = info_df.to_html()
+    info_df = info_df.rename(columns=info_df.iloc[0]).drop(info_df.index[0])
+    info_html = info_df.to_html(index=False)
 
     # Astrogeology site
     url4 = 'https://marshemispheres.com/'
@@ -70,4 +69,4 @@ def scrape():
     mars_info['mars_fact'] = info_html
     mars_info['hemisphere_image_url'] = hemisphere_image_urls
 
-    return mars_info
+    return mars_info 
