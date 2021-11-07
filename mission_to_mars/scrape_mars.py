@@ -62,11 +62,10 @@ def scrape():
         hemisphere_image_urls.append({'title':image_titles[x], 'img_url': image_links[x]})
 
     # Create a dictionary to hold all mars information
-    mars_info = {}
-    mars_info['news_title'] = title_list
-    mars_info['news_p'] = para_list
-    mars_info['featured_image_url'] = featured_image_url
-    mars_info['mars_fact'] = info_html
-    mars_info['hemisphere_image_url'] = hemisphere_image_urls
-
+    mars_info = {
+        'news_title': title_list,
+        'news_p': para_list,
+        'featured_image_url': featured_image_url,
+        'mars_fact' : info_html,
+        'hemisphere_image_url': hemisphere_image_urls}
     return mars_info 

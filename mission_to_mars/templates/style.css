@@ -1,0 +1,12 @@
+.jumbotron {
+    padding: 20rem 4rem;
+    margin-top: 20rem ;
+    background-color: darkblue;
+}
+
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    
+}
